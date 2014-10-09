@@ -18,6 +18,13 @@
 ################################################
 
 
+################################################
+# API Configurations
+# 
+# These include secret keys and client ids. You
+# do not want to share these on github. 
+################################################
+config/artsy.js
 
 ################################################
 # Local Configuration
