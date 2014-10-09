@@ -25,6 +25,30 @@ To stop it, run:
 
 `forever stop .app.js`
 
+
+### API Connections/Connecting
+
+In order to gather a variety of data, ArtX connects to various APIs. And in doing so, there is some specifc code needed in order to make the connections. Some of these are listed below.
+
+General
+-------
+
+Coming soon...
+
+[Artsy.net](http://www.artsy.net) Public API
+--------------------
+
+[Traverson](https://github.com/basti1302/traverson) - Traverson comes in handy when consuming REST APIs that follow the HATEOAS principle, that is, REST APIs that have links between their resources. 
+[SuperAgent](http://visionmedia.github.io/superagent/) - Super Agent is light-weight progressive ajax API crafted for flexibility, readability, and a low learning curve after being frustrated with many of the existing request APIs.
+
+### User Authentication
+
+@TODO: Set up user authentication using [Passport](http://passportjs.org/) and use the [Sails Social Auth Examples](https://github.com/stefanbuck/sails-social-auth-example) as a guide for the implementation.
+
+### File Uploads
+
+@TODO: It's not currently implemneted, but if file uploads are needed, the plan would be to implement [Skipper](https://github.com/balderdashy/skipper).
+
 ## Frontend Stack
 
 The presentation layer is currently built on [AngularJS](http://www.angularjs.org). You can read more about how we set this up via the [StackOverflow post](https://stackoverflow.com/questions/21938850/angularjs-sailsjs). We're mimicking something similar to <https://github.com/angular/angular-seed>.
