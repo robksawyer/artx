@@ -11,6 +11,30 @@ In order to get a better understanding of how Sails config variables are passed 
 
 Note: In order to get around some Heroku issue. We ended up renaming app.js to .app.js. Heroku doesn't like some of the syntax in the Sails default app.js file.
 
+
+## On-boarding - This is a work in progress
+
+New to all of this? Maybe the following will help. This is basically how the app was spawned/born.
+
+Dependencies: [Homebrew](http://brew.sh), [SailsJS](http://sailsjs.org), Git, [Heroku Toolbelt](https://toolbelt.heroku.com/)
+
+1. Generate a new app `sails new my-app` and `cd my-app` into the folder generated.
+1. Follow the post [Sails.js, sick of restarting your server?](https://coderwall.com/p/njcr7w) to keep Sails running so that you don't have to keep lifting the sails.
+1. Update your package.json with package that you need.
+
+```
+"pg": "3.x",
+"sails-postgresql": "^0.10.9",
+"forever": "^0.11.1",
+```
+1. Run `git init` and add code to an existing [Github](http://github.com) project that you previously created using `git remote add origin https://github.com/myusername/myproject.git`
+1. Set up Heroku wit hthe command `heroku apps:create my-app-name` and possibly a staging app `heroku apps:create example-staging --remote staging`
+1. Check to ensure Git remote was added with `git remote -v`
+1. Add the initial code with `git add .`
+1. Commit the initial code with `git commit -am "My intial code"`.
+1. Push the code to the repo.
+
+
 ## Development
 
 For development and task managment, we're using the standard package of [Grunt](http://gruntjs.org) and the Node Package Manager (NPM). In order to install dependencies you must run `npm install` in the app directoy. If you don't have npm, that means you don't have node installed. Check out [Homebrew](http://brew.sh) – it'll help you get the programs you need quickly.
@@ -35,11 +59,11 @@ General
 
 Coming soon...
 
-[Artsy.net](http://www.artsy.net) Public API
---------------------
+### [Artsy.net](http://www.artsy.net) Public API
 
-[Traverson](https://github.com/basti1302/traverson) - Traverson comes in handy when consuming REST APIs that follow the HATEOAS principle, that is, REST APIs that have links between their resources. 
-[SuperAgent](http://visionmedia.github.io/superagent/) - Super Agent is light-weight progressive ajax API crafted for flexibility, readability, and a low learning curve after being frustrated with many of the existing request APIs.
+- [Traverson](https://github.com/basti1302/traverson) - Traverson comes in handy when consuming REST APIs that follow the HATEOAS principle, that is, REST APIs that have links between their resources. 
+
+- [SuperAgent](http://visionmedia.github.io/superagent/) - Super Agent is light-weight progressive ajax API crafted for flexibility, readability, and a low learning curve after being frustrated with many of the existing request APIs.
 
 ### User Authentication
 
