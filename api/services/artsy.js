@@ -1,7 +1,7 @@
 /**
 *
-* artsy.js
-* @description 
+* Artsy.js
+* @description A service that connects to the Artsy.net public API.
 * @url https://developers.artsy.net/
 **/
 var request = require('superagent');
@@ -17,5 +17,3 @@ request
   .end(function(res) {
     xappToken = res.body.token; 
   });
-
- debug(sails.config.artsy.clientID);
