@@ -28,9 +28,9 @@
   },
   "scripts": {
     "start": "sails lift --prod",
-    "debug": "node debug app.js"
+    "debug": "node debug .app.js"
   },
-  "main": "app.js",
+  "main": ".app.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/robsawyer/artx.git"
