@@ -84,7 +84,7 @@ ArtX is built off of the [NodeJS](http//www.nodejs.org) framework known as [Sail
 ### Database
 The current database is [PostgreSQL](http://postgresql.org). You can find out more about how to set up Postgres on Heroku at <https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-the-add-on>. 
 
-We are also using `sails-postgresql: "^0.10.9"` as the database adapter. You can learn more about Sails database adapters at ???
+We are also using `sails-postgresql: "^0.10.9"` as the database adapter. You can learn more about Sails database adapters at [Waterline: SQL/noSQL Data Mapper (ORM/ODM)#Adapters](http://sailsjs.org/#/documentation/concepts/ORM?q=adapters).
 
 ### Logging 
 
