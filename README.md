@@ -19,19 +19,23 @@ New to all of this? Maybe the following will help. This is basically how the app
 Dependencies: [Homebrew](http://brew.sh), [SailsJS](http://sailsjs.org), Git, [Heroku Toolbelt](https://toolbelt.heroku.com/)
 
 1. Generate a new app `sails new my-app` and `cd my-app` into the folder generated.
-1. Follow the post [Sails.js, sick of restarting your server?](https://coderwall.com/p/njcr7w) to keep Sails running so that you don't have to keep lifting the sails.
-1. Update your package.json with packages that you need.
+2. Follow the post [Sails.js, sick of restarting your server?](https://coderwall.com/p/njcr7w) to keep Sails running so that you don't have to keep lifting the sails.
+3. Update your package.json with packages that you need.
 ```
 "pg": "3.x",
 "sails-postgresql": "^0.10.9",
 "forever": "^0.11.1",
 ```
-1. Run `git init` and add code to an existing [Github](http://github.com) project that you previously created using `git remote add origin https://github.com/myusername/myproject.git`
-1. Set up Heroku wit hthe command `heroku apps:create my-app-name` and possibly a staging app `heroku apps:create example-staging --remote staging`
-1. Check to ensure Git remote was added with `git remote -v`
-1. Add the initial code with `git add .`
-1. Commit the initial code with `git commit -am "My intial code"`.
-1. Push the code to the repo.
+4. Run `git init` and add code to an existing [Github](http://github.com) project that you previously created using `git remote add origin https://github.com/myusername/myproject.git`
+5. Set up Heroku with the command `heroku apps:create my-app-name` and possibly a staging app `heroku apps:create example-staging --remote staging`
+6. Check to ensure Git remote was added with `git remote -v`
+7. Rename the `app.js` file to `.app.js`. Heroku doesn't like the syntax in the app file for some reason and throws errors. I think this cancels out some Heroku test.
+8. Add the initial code with `git add .`
+9. Commit the initial code with `git commit -am "My intial code"`.
+10. Push the code to the repo. `git push`
+11. Push code to Heroku. `git push heroku master`
+12. Boot up Forever. `forever -w .app.js`
+13. Your app should be running locally at `http://localhost:1337`.
 
 
 ## Development
