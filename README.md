@@ -20,12 +20,12 @@ Dependencies: [Homebrew](http://brew.sh), [SailsJS](http://sailsjs.org), Git, [H
 
 1. Generate a new app `sails new my-app` and `cd my-app` into the folder generated.
 1. Follow the post [Sails.js, sick of restarting your server?](https://coderwall.com/p/njcr7w) to keep Sails running so that you don't have to keep lifting the sails.
-1. Update your package.json with package that you need.
-	```
-	"pg": "3.x",
-	"sails-postgresql": "^0.10.9",
-	"forever": "^0.11.1",
-	```
+1. Update your package.json with packages that you need.
+```
+"pg": "3.x",
+"sails-postgresql": "^0.10.9",
+"forever": "^0.11.1",
+```
 1. Run `git init` and add code to an existing [Github](http://github.com) project that you previously created using `git remote add origin https://github.com/myusername/myproject.git`
 1. Set up Heroku wit hthe command `heroku apps:create my-app-name` and possibly a staging app `heroku apps:create example-staging --remote staging`
 1. Check to ensure Git remote was added with `git remote -v`
