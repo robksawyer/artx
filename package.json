@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
-  "keywords": [],
+  "keywords": ["art","art houses","indices","artists"],
   "dependencies": {
     "sails": "~0.10.5",
     "sails-disk": "~0.10.0",
@@ -24,10 +24,10 @@
     "grunt-contrib-coffee": "~0.10.1",
     "pg": "3.x",
     "sails-postgresql": "^0.10.9",
-    "forever": "^0.11.1",
+    "forever": "^0.11.1"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "sails lift --prod",
     "debug": "node debug app.js"
   },
   "main": "app.js",
@@ -36,5 +36,5 @@
     "url": "git://github.com/robsawyer/artx.git"
   },
   "author": "robsawyer",
-  "license": ""
+  "license": "MIT"
 }
