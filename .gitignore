@@ -19,14 +19,6 @@
 
 
 ################################################
-# API Configurations
-# 
-# These include secret keys and client ids. You
-# do not want to share these on github. 
-################################################
-config/api_*.js
-
-################################################
 # Local Configuration
 #
 # Explicitly ignore files which contain:
