@@ -57,11 +57,6 @@ To stop it, run:
 
 In order to gather a variety of data, ArtX connects to various APIs. And in doing so, there is some specifc code needed in order to make the connections. Some of these are listed below.
 
-General
--------
-
-Coming soon...
-
 ### [Artsy.net](http://www.artsy.net) Public API
 
 - [Traverson](https://github.com/basti1302/traverson) - Traverson comes in handy when consuming REST APIs that follow the HATEOAS principle, that is, REST APIs that have links between their resources. 
@@ -80,6 +75,18 @@ Coming soon...
 
 The presentation layer is currently built on [AngularJS](http://www.angularjs.org). You can read more about how we set this up via the [StackOverflow post](https://stackoverflow.com/questions/21938850/angularjs-sailsjs). We're mimicking something similar to <https://github.com/angular/angular-seed>.
 
+#### Lo-Dash (A utility library delivering consistency, customization, performance, & extras.)
+
+Built into SailsJS is [Lo-Dash](http://devdocs.io/lodash/). The syntax will be used throughout the app and looks like `_.map`. If you're not familiar, you'll need to [browse the docs](http://devdocs.io/lodash/) to see what types of methods exist. Or atleast use the docs as a reference when you stumble upon the _. methods.
+
+#### Express (Fast, unopinionated, minimalist web framework for Node.js)
+
+It's also worth noting that SailsJS is built on [ExpressJS](http://expressjs.com/). You can find those docs at [here](http://expressjs.com/4x/api.html). The syntax/calls looks like `app.get('/', function(req, res)` or `function(req, res){`.
+
+#### EJS (Embedded JavaScript templates)
+
+The views are currently using EJS as the templating engine. You can read more about these [here](https://github.com/visionmedia/ejs).
+
 ## Backend Stack
 
 ### Framework
@@ -92,11 +99,10 @@ We are also using `sails-postgresql: "^0.10.9"` as the database adapter. You can
 
 ### Logging 
 
-We are currently using [Papertrail]() for all of our logging purposes.
+We are currently using [Papertrail](https://papertrailapp.com/) for all of our logging purposes.
 
 ## The App
 The current app is running at <http://artx.herokuapp.com>.
-
 
 ## Staging 
 

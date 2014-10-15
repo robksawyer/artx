@@ -25,6 +25,7 @@
 # do not want to share these on github. 
 ################################################
 config/artsy.js
+config/linkedin.js
 
 ################################################
 # Local Configuration

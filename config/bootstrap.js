@@ -18,4 +18,5 @@ module.exports.bootstrap = function(cb) {
 	//Initiate APIs
 	//
 	Artsy.init();
+	LinkedIn.init();
 };
