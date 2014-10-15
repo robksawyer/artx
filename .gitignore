@@ -24,8 +24,7 @@
 # These include secret keys and client ids. You
 # do not want to share these on github. 
 ################################################
-config/artsy.js
-config/linkedin.js
+config/api_*.js
 
 ################################################
 # Local Configuration
