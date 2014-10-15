@@ -77,7 +77,7 @@ ArtX uses the LinkedIn profile as part of the ArtX algorithm. More details soon.
 
 Instead of trying to get our own social score via Twitter, Facebook, etc. The plan is to use a Klout score. This will limit the amount of API calls in the end and likely make the end experience better.
 
-Details about the Klout API can be found at <>.
+Details about the Klout API can be found at <http://developer.klout.com/>.
 
 
 ### User Authentication
