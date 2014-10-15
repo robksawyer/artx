@@ -9,7 +9,7 @@ module.exports = {
 	
 	score: function(req, res) {
 			
-		Klout.klout.getKloutIdentity('SteveMartinToGo', "tw", function(err, k_res){
+		Klout.klout.getKloutIdentity(req.param('name'), "tw", function(err, k_res){
 			if(err) return res.json(err);
 
 			if(k_res && k_res.id){
