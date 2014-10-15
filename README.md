@@ -73,6 +73,12 @@ ArtX uses the LinkedIn profile as part of the ArtX algorithm. More details soon.
 ### Google APIs
 
 
+### Klout Public API
+
+Instead of trying to get our own social score via Twitter, Facebook, etc. The plan is to use a Klout score. This will limit the amount of API calls in the end and likely make the end experience better.
+
+Details about the Klout API can be found at <>.
+
 
 ### User Authentication
 
@@ -121,6 +127,12 @@ The current staging site is located at <http://artx-stage.herokuapp.com>.
 
 
 ## Deployment 
+
+### Environment Variables
+
+These can be tricky if you've never worked with them. Basically, our strategy is similar to what's mentioned in the post <http://stackoverflow.com/questions/21291111/sails-js-accessing-local-js-environment-settings-in-controllers>. The idea here is to add environment variables needed locally by Sails to the `config/local.js` file. All of the others are added using `heroku config:set MYVAR=''` and then used in the production code via `process.env.MYVAR`.
+
+### General Info
 
 There are a couple of things to note about deployment. First, check the `package.json` file to ensure that the scripts section is set to your liking. In order to start the production version of Sails, you'd want something like the following.
 
