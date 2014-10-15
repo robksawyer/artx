@@ -14,7 +14,7 @@ module.exports = {
 	init: function(){
 
 		sails.log.info('----- LinkedIn API Initialized -----');
-		
+
 		//Initialize the library with options
 		Linkedin(sails.config.linkedin.api_key, sails.config.linkedin.secret_key, '/linkedin/get_token');
 

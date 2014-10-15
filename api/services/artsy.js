@@ -4,11 +4,17 @@
 * @description A service that connects to the Artsy.net public API.
 * @url https://developers.artsy.net/
 **/
-var request = require('superagent'),
+/*var request = require('superagent'),
  	traverson = require('traverson'),
- 	xappToken;
+ 	xappToken;*/
 
 module.exports = {
+
+	request: require('superagent'),
+	
+	traverson: require('traverson'),
+
+	xappToken: '',
 	
 	init: function(){
 
@@ -20,12 +26,12 @@ module.exports = {
 
 		try{ 
 
-			request
+			this.request
 				.post(apiTokenUrl)
 				.send({ client_id: clientID, client_secret: clientSecret })
 				.end(function(res) {
 					if (res) {
-						xappToken = res.body.token; 
+						this.xappToken = res.body.token; 
 					} else {
 						sails.log.error('api/services/Artsy.js:');
 						sails.log.error(res.text);
@@ -42,15 +48,15 @@ module.exports = {
 
 	getArtistDetails: function(){
 		
-		var api = traverson.jsonHal.from(sails.config.artsy.apiUrl);
+		var api = this.traverson.jsonHal.from(sails.config.artsy.apiUrl);
 
-		sails.log(xappToken);
+		sails.log(this.xappToken);
 
 		var request = api.newRequest()
 			.follow('artist')
 			.withRequestOptions({
 				headers: {
-					'X-Xapp-Token': xappToken,
+					'X-Xapp-Token': this.xappToken,
 					'Accept': 'application/vnd.artsy-v2+json'
 				}
 			})
@@ -60,7 +66,7 @@ module.exports = {
 			.follow('artist')
 			.withRequestOptions({
 				headers: {
-					'X-Xapp-Token': xappToken,
+					'X-Xapp-Token': this.xappToken,
 					'Accept': 'application/vnd.artsy-v2+json'
 				}
 			})

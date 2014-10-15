@@ -59,9 +59,20 @@ In order to gather a variety of data, ArtX connects to various APIs. And in doin
 
 ### [Artsy.net](http://www.artsy.net) Public API
 
+ArtX uses Artsy data to collect information about an assortment of artists and as a part of the ArtX algorithm.
+
 - [Traverson](https://github.com/basti1302/traverson) - Traverson comes in handy when consuming REST APIs that follow the HATEOAS principle, that is, REST APIs that have links between their resources. 
 
 - [SuperAgent](http://visionmedia.github.io/superagent/) - Super Agent is light-weight progressive ajax API crafted for flexibility, readability, and a low learning curve after being frustrated with many of the existing request APIs.
+
+### [LinkedIn](https://developer.linkedin.com) Public API
+
+ArtX uses the LinkedIn profile as part of the ArtX algorithm. More details soon.
+
+
+### Google APIs
+
+
 
 ### User Authentication
 
